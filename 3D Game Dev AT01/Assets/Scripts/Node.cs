@@ -18,6 +18,8 @@ public class Node : MonoBehaviour
     /// </summary>
     public Node[] Parents { get { return parents; } }
 
+    public bool Visited { get; internal set; }
+
     private Vector3 offset = new Vector3(0, 1, 0);
 
     private void OnDrawGizmos()
