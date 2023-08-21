@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    //Define delegate types and events here
+    // Define delegate types and events here
 
     public Node CurrentNode { get; private set; }
     public Node TargetNode { get; private set; }
@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
     private bool moving = false;
     private Vector3 currentDir;
 
-
-    [SerializeField] EventSystem _eventSystem;
+    [SerializeField] private EventSystem _eventSystem;
+    private bool canInput = true; // Added flag to control input
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +34,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moving == false)
-        {
-            //Implement inputs and event-callbacks here
-        }
-        else
+        if (moving)
         {
             if (Vector3.Distance(transform.position, TargetNode.transform.position) > 0.25f)
             {
@@ -48,17 +44,17 @@ public class Player : MonoBehaviour
             {
                 moving = false;
                 CurrentNode = TargetNode;
+                canInput = true; // Enable input when movement is done
             }
         }
-        PlayerMoveInput();
+        else if (canInput) // Check if input is allowed
+        {
+            PlayerMoveInput();
+        }
     }
 
-    //Implement mouse interaction method here
     private void PlayerMoveInput()
     {
-
-
-
         if (Input.GetAxisRaw("Horizontal") < 0)
         {
             CheckForNode(-Vector3.right);
@@ -76,6 +72,8 @@ public class Player : MonoBehaviour
             CheckForNode(Vector3.forward);
         }
     }
+
+    // Implement mouse interaction method here
 
     public void PlayerMouseInput(int direction)
     {
@@ -95,24 +93,9 @@ public class Player : MonoBehaviour
                 return;
         }
     }
-    //call the input(direction) method
-    //invoke 'change colour' event
 
-    /// <summary>
-    /// Sets the players target node and current directon to the specified node.
-    /// </summary>
-    /// <param name="node"></param>
-    /// 
     public void CheckForNode(Vector3 checkDirection)
     {
-        /*takes in int to determine direction
-         * 0 = north
-         * 1 = east
-         * 2 = south
-         * 3 = west
-         */
-
-
         Vector3 direction = Vector3.zero;
 
         RaycastHit hit;
@@ -129,17 +112,18 @@ public class Player : MonoBehaviour
         {
             Debug.Log("No valid node in that direction");
         }
-
     }
 
     public void MoveToNode(Node node)
     {
-        if (moving == false)
+        if (!moving)
         {
             TargetNode = node;
             currentDir = TargetNode.transform.position - transform.position;
             currentDir = currentDir.normalized;
             moving = true;
+            canInput = false; // Disable input when moving
         }
     }
 }
+
