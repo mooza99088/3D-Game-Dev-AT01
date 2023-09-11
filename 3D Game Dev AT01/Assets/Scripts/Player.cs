@@ -106,11 +106,13 @@ public class Player : MonoBehaviour
             if (hit.collider.TryGetComponent<Node>(out node))
             {
                 MoveToNode(node);
+                
             }
         }
         else
         {
             Debug.Log("No valid node in that direction");
+            
         }
     }
 

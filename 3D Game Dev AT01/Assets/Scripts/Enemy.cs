@@ -14,10 +14,6 @@ public class Enemy : MonoBehaviour
     public delegate void GameEndDelegate();
     public event GameEndDelegate GameOverEvent = delegate { };
 
-
-
-
-
     private bool targetFound;
     private Stack<Node> unsearchedNodes = new Stack<Node>();
 
