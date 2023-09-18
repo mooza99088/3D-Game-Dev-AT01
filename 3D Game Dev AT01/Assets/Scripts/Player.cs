@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private EventSystem _eventSystem;
     private bool canInput = true; // Added flag to control input
+
+
 
     // Start is called before the first frame update
     void Start()

@@ -2049,6 +2049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 14
   _eventSystem: {fileID: 1215032672}
+  newButton: {fileID: 1167895073}
 --- !u!135 &1220234474
 SphereCollider:
   m_ObjectHideFlags: 0
