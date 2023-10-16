@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 416269474}
   - component: {fileID: 416269473}
   - component: {fileID: 416269472}
+  - component: {fileID: 416269475}
   m_Layer: 5
   m_Name: ButtonSouth
   m_TagString: Untagged
@@ -751,8 +752,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -769,6 +770,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416269470}
   m_CullTransparentMesh: 1
+--- !u!114 &416269475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416269470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4b58b3a709b104390410ebea368a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: South
 --- !u!1 &700098635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1055,7 @@ GameObject:
   - component: {fileID: 742463828}
   - component: {fileID: 742463827}
   - component: {fileID: 742463826}
+  - component: {fileID: 742463829}
   m_Layer: 5
   m_Name: ButtonWest
   m_TagString: Untagged
@@ -1144,8 +1159,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1162,6 +1177,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742463824}
   m_CullTransparentMesh: 1
+--- !u!114 &742463829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742463824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4b58b3a709b104390410ebea368a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: West
 --- !u!1 &836551679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1325,7 @@ GameObject:
   - component: {fileID: 892648261}
   - component: {fileID: 892648260}
   - component: {fileID: 892648259}
+  - component: {fileID: 892648262}
   m_Layer: 5
   m_Name: ButtonEast
   m_TagString: Untagged
@@ -1400,8 +1429,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1418,6 +1447,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892648257}
   m_CullTransparentMesh: 1
+--- !u!114 &892648262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892648257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4b58b3a709b104390410ebea368a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: East
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1762,7 @@ GameObject:
   - component: {fileID: 1157219711}
   - component: {fileID: 1157219710}
   - component: {fileID: 1157219709}
+  - component: {fileID: 1157219713}
   m_Layer: 5
   m_Name: Canvas_UI-HUD
   m_TagString: Untagged
@@ -1813,6 +1856,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1157219713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157219708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d1a3ae7bbd1564c8eeb66387fbd811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mButtons:
+  - {fileID: 1167895078}
+  - {fileID: 416269475}
+  - {fileID: 892648262}
+  - {fileID: 742463829}
 --- !u!1 &1167895073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1885,7 @@ GameObject:
   - component: {fileID: 1167895077}
   - component: {fileID: 1167895076}
   - component: {fileID: 1167895075}
+  - component: {fileID: 1167895078}
   m_Layer: 5
   m_Name: ButtonNorth
   m_TagString: Untagged
@@ -1928,8 +1989,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1946,6 +2007,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167895073}
   m_CullTransparentMesh: 1
+--- !u!114 &1167895078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167895073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4b58b3a709b104390410ebea368a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: North
 --- !u!1 &1215032670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 14
   _eventSystem: {fileID: 1215032672}
-  newButton: {fileID: 1167895073}
 --- !u!135 &1220234474
 SphereCollider:
   m_ObjectHideFlags: 0

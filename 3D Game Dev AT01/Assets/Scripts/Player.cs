@@ -19,7 +19,8 @@ public class Player : MonoBehaviour
     [SerializeField] private EventSystem _eventSystem;
     private bool canInput = true; // Added flag to control input
 
-
+    public delegate void DirectionalButtonPush(bool greenOrRed, string buttonID);
+    public static DirectionalButtonPush directionalButtonPushEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -115,7 +116,6 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("No valid node in that direction");
-            
         }
     }
 
