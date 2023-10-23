@@ -60,6 +60,7 @@ public class MyButton : MonoBehaviour
     private void OnDestroy()
     {
         //MoveCube.directionalButtonPushEvent -= SetButtonColor;
+        buttonSprite.color = Color.white;
     }
 
 }

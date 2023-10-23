@@ -11,12 +11,12 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
-        MoveCube.directionalButtonPushEvent += SetButtonColor;
+        Player.directionalButtonPushEvent += SetButtonColor;
     }
 
     private void OnDestroy()
     {
-        MoveCube.directionalButtonPushEvent -= SetButtonColor;
+        Player.directionalButtonPushEvent -= SetButtonColor;
     }
 
 
